@@ -7,6 +7,9 @@ export default defineConfig({
   site: 'https://djoudj-dev.github.io',
   base: '/le-vieu-comptoir',
   output: 'static',
+  build: {
+    inlineStylesheets: 'always',
+  },
   vite: {
     plugins: [tailwindcss()],
   },
