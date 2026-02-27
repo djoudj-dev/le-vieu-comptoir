@@ -49,14 +49,14 @@ Le projet sera accessible sur `http://localhost:4321/`.
 
 Toutes les commandes doivent être exécutées depuis la racine du projet.
 
-| Commande                | Action                                                |
-| :---------------------- | :---------------------------------------------------- |
-| `npm install`           | Installe toutes les dépendances                       |
-| `npm run dev`           | Lance le serveur de développement à `localhost:4321`  |
-| `npm run build`         | Compile et optimise le site pour la production (`dist/`) |
-| `npm run preview`       | Permet de visualiser le build local avant déploiement |
-| `npm run lint`          | Vérifie la syntaxe ESLint du code                     |
-| `npm run format`        | Applique les règles de formatage Prettier             |
+| Commande          | Action                                                   |
+| :---------------- | :------------------------------------------------------- |
+| `npm install`     | Installe toutes les dépendances                          |
+| `npm run dev`     | Lance le serveur de développement à `localhost:4321`     |
+| `npm run build`   | Compile et optimise le site pour la production (`dist/`) |
+| `npm run preview` | Permet de visualiser le build local avant déploiement    |
+| `npm run lint`    | Vérifie la syntaxe ESLint du code                        |
+| `npm run format`  | Applique les règles de formatage Prettier                |
 
 ---
 
@@ -79,4 +79,4 @@ Toutes les commandes doivent être exécutées depuis la racine du projet.
 
 ---
 
-*Ce site a été pensé pour mettre en valeur le savoir-faire de la brasserie française tout en tirant parti des dernières avancées en matière de développement web moderne.*
+_Ce site a été pensé pour mettre en valeur le savoir-faire de la brasserie française tout en tirant parti des dernières avancées en matière de développement web moderne._
