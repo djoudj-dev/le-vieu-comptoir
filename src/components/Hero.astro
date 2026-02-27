@@ -52,13 +52,13 @@ import heroBg from '../assets/images/hero-bg.png';
     <div class="flex flex-col sm:flex-row gap-4">
       <a
         href="#reservation"
-        class="bg-brand-bordeaux hover:bg-brand-bordeaux-light text-brand-cream px-8 py-4 rounded-sm transition-colors text-sm uppercase tracking-widest font-bold border border-brand-bordeaux-light shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200"
+        class="bg-brand-bordeaux hover:bg-brand-bordeaux-light text-brand-cream px-8 py-4 rounded-sm transition-colors text-sm uppercase tracking-widest font-bold border border-brand-bordeaux-light shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200 focus:outline-none focus:ring-2 focus:ring-brand-cream focus:ring-offset-2 focus:ring-offset-brand-dark"
       >
         Réserver une table
       </a>
       <a
         href="#menu"
-        class="bg-transparent hover:bg-brand-dark-wood/50 text-brand-cream border border-brand-gold px-8 py-4 rounded-sm transition-all text-sm uppercase tracking-widest font-bold backdrop-blur-sm"
+        class="bg-transparent hover:bg-brand-dark-wood/50 text-brand-cream border border-brand-gold px-8 py-4 rounded-sm transition-all text-sm uppercase tracking-widest font-bold backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"
       >
         Découvrir la carte
       </a>
@@ -71,7 +71,8 @@ import heroBg from '../assets/images/hero-bg.png';
   >
     <a
       href="#about"
-      class="text-brand-gold opacity-75 hover:opacity-100 transition-opacity"
+      aria-label="Défiler vers la section à propos"
+      class="text-brand-gold opacity-75 hover:opacity-100 transition-opacity focus:outline-none focus:ring-2 focus:ring-brand-gold rounded-full p-2"
     >
       <svg
         class="w-6 h-6"
