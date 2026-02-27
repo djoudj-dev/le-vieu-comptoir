@@ -1,21 +1,34 @@
-import '../styles/global.css'
+---
+import "../styles/global.css";
+---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="generator" content={Astro.generator} />
-  <title>Astro Basics</title>
-</head>
-<body>
-  <slot />
-  <style>
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</body>
+<!DOCTYPE html>
+<html lang="fr" class="antialiased scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={`${import.meta.env.BASE_URL}/favicon.svg`}
+    />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Le Vieux Comptoir | Brasserie Traditionnelle Parisienne</title>
+    <meta
+      name="description"
+      content="Découvrez Le Vieux Comptoir, l'authentique brasserie parisienne. Cuisine traditionnelle, ambiance historique, fumoir à cigares, et soirées d'exception."
+    />
+  </head>
+  <body
+    class="bg-brand-cream text-brand-dark flex flex-col min-h-screen font-sans"
+  >
+    <slot />
+  </body>
+</html>

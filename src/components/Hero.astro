@@ -1,0 +1,85 @@
+---
+// Hero component
+---
+
+<section
+  class="relative h-screen flex items-center justify-center overflow-hidden"
+>
+  {/* Background Image with Overlay */}
+  <div class="absolute inset-0 w-full h-full">
+    <img
+      src={`${import.meta.env.BASE_URL}/images/hero-bg.png`}
+      alt="L'intérieur chaleureux du Vieux Comptoir"
+      class="w-full h-full object-cover object-center"
+    />
+    <div
+      class="absolute inset-0 bg-brand-dark/60 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"
+    >
+    </div>
+  </div>
+
+  {/* Content */}
+  <div
+    class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center mt-16"
+  >
+    <div class="mb-6">
+      <span
+        class="text-brand-gold uppercase tracking-[0.3em] text-sm md:text-base font-semibold"
+        >Fondé en 1892</span
+      >
+    </div>
+
+    <h1
+      class="text-5xl md:text-7xl lg:text-8xl font-serif text-brand-cream mb-6 leading-tight drop-shadow-lg"
+    >
+      L'Âme de <br />
+      <span class="text-brand-gold italic">Paris</span>.
+    </h1>
+
+    <p
+      class="text-lg md:text-xl text-brand-cream/90 mb-10 max-w-2xl font-light leading-relaxed"
+    >
+      Authentique brasserie parisienne depuis plus d'un siècle. Cuisine de
+      tradition, sélection de bières artisanales et atmosphère intemporelle.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a
+        href="#reservation"
+        class="bg-brand-bordeaux hover:bg-brand-bordeaux-light text-brand-cream px-8 py-4 rounded-sm transition-colors text-sm uppercase tracking-widest font-bold border border-brand-bordeaux-light shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200"
+      >
+        Réserver une table
+      </a>
+      <a
+        href="#menu"
+        class="bg-transparent hover:bg-brand-dark-wood/50 text-brand-cream border border-brand-gold px-8 py-4 rounded-sm transition-all text-sm uppercase tracking-widest font-bold backdrop-blur-sm"
+      >
+        Découvrir la carte
+      </a>
+    </div>
+  </div>
+
+  {/* Scroll Down Indicator */}
+  <div
+    class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+  >
+    <a
+      href="#about"
+      class="text-brand-gold opacity-75 hover:opacity-100 transition-opacity"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </a>
+  </div>
+</section>

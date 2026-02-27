@@ -1,0 +1,74 @@
+---
+// About component
+---
+
+<section id="about" class="py-24 bg-brand-cream text-brand-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Text Content */}
+      <div class="space-y-8">
+        <div>
+          <h2
+            class="text-brand-bordeaux text-sm uppercase tracking-[0.2em] font-bold mb-4 flex items-center gap-4"
+          >
+            <span class="w-12 h-px bg-brand-bordeaux"></span>
+            Notre Histoire
+          </h2>
+          <h3 class="text-4xl md:text-5xl font-serif leading-tight">
+            Un siècle de tradition <br />au cœur de la capitale.
+          </h3>
+        </div>
+
+        <div
+          class="text-brand-dark/80 space-y-4 font-light leading-relaxed text-lg"
+        >
+          <p>
+            Depuis 1892, Le Vieux Comptoir est le repaire des épicuriens, des
+            poètes et des amoureux du vrai Paris. Derrière notre grande porte en
+            bois massif se cache un monde où le temps semble s'être arrêté,
+            préservant l'esprit canaille et l'élégance des grandes brasseries
+            d'antan.
+          </p>
+          <p>
+            Nos banquettes en velours bordeaux et nos miroirs piqués ont été les
+            témoins de mille histoires. C'est dans ce décor classé que notre
+            équipe perpétue avec passion l'art de recevoir à la française.
+          </p>
+        </div>
+
+        <div class="pt-4 border-t border-brand-dark/10">
+          <h4 class="font-serif text-2xl text-brand-dark mb-2">
+            Chef Pierre Dubois
+          </h4>
+          <p class="text-brand-dark/70 font-light italic">
+            "La cuisine de bistrot, c'est l'art d'utiliser ce qu'il y a de
+            meilleur pour en faire des souvenirs."
+          </p>
+        </div>
+      </div>
+
+      {/* Image Gallery/Grid */}
+      <div class="relative h-[600px]">
+        {/* Main Image */}
+        <div
+          class="absolute inset-0 md:inset-x-8 md:inset-y-0 rounded-sm overflow-hidden shadow-2xl z-10"
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}/images/chef.png`}
+            alt="Le Chef dans ses cuisines"
+            class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+          />
+        </div>
+        {/* Decorative Elements */}
+        <div
+          class="absolute -top-6 -right-6 w-3/4 h-3/4 border-2 border-brand-gold/30 rounded-sm z-0 hidden md:block"
+        >
+        </div>
+        <div
+          class="absolute -bottom-6 -left-6 w-3/4 h-3/4 bg-brand-dark-wood rounded-sm z-0 hidden md:block"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
