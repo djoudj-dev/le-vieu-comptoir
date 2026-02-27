@@ -172,36 +172,36 @@
 
 <script>
   // Script to handle the modal
-  const form = document.getElementById("reservation-form");
-  const modal = document.getElementById("thefork-modal");
-  const modalContent = document.getElementById("thefork-modal-content");
-  const closeBtn = document.getElementById("close-modal-btn");
-  const continueBtn = document.getElementById("continue-btn");
+  const form = document.getElementById('reservation-form');
+  const modal = document.getElementById('thefork-modal');
+  const modalContent = document.getElementById('thefork-modal-content');
+  const closeBtn = document.getElementById('close-modal-btn');
+  const continueBtn = document.getElementById('continue-btn');
 
   // Open modal on form submit instead of submitting
-  form?.addEventListener("submit", (e) => {
+  form?.addEventListener('submit', (e) => {
     e.preventDefault();
     if (modal && modalContent) {
-      modal.classList.remove("opacity-0", "pointer-events-none");
-      modalContent.classList.remove("scale-95");
-      modalContent.classList.add("scale-100");
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modalContent.classList.remove('scale-95');
+      modalContent.classList.add('scale-100');
     }
   });
 
   // Close modal functions
   const closeModal = () => {
     if (modal && modalContent) {
-      modal.classList.add("opacity-0", "pointer-events-none");
-      modalContent.classList.remove("scale-100");
-      modalContent.classList.add("scale-95");
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modalContent.classList.remove('scale-100');
+      modalContent.classList.add('scale-95');
     }
   };
 
-  closeBtn?.addEventListener("click", closeModal);
-  continueBtn?.addEventListener("click", closeModal); // closes our modal as it opens new tab
+  closeBtn?.addEventListener('click', closeModal);
+  continueBtn?.addEventListener('click', closeModal); // closes our modal as it opens new tab
 
   // Close when clicking outside
-  modal?.addEventListener("click", (e) => {
+  modal?.addEventListener('click', (e) => {
     if (e.target === modal) closeModal();
   });
 </script>

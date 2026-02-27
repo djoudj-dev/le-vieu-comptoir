@@ -8,6 +8,6 @@ export default defineConfig({
   base: '/le-vieux-comptoir',
   output: 'static',
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });
