@@ -25,7 +25,7 @@
           </h3>
         </div>
 
-        <form class="space-y-6">
+        <form class="space-y-6" id="reservation-form">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label
@@ -96,7 +96,7 @@
 
           <div class="mt-8 text-center pt-6">
             <button
-              type="button"
+              type="submit"
               class="bg-brand-bordeaux hover:bg-brand-bordeaux-light text-brand-cream px-10 py-4 rounded-sm transition-colors text-sm uppercase tracking-widest font-bold border border-brand-bordeaux-light w-full md:w-auto shadow-lg hover:shadow-xl"
             >
               Confirmer la réservation
@@ -111,3 +111,97 @@
     </div>
   </div>
 </section>
+
+{/* Redirect Modal */}
+<div
+  id="thefork-modal"
+  class="fixed inset-0 z-50 flex items-center justify-center bg-brand-dark/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+>
+  <div
+    class="bg-brand-cream p-8 max-w-md w-full mx-4 rounded-sm shadow-2xl border border-brand-gold/30 transform scale-95 transition-transform duration-300 text-center"
+    id="thefork-modal-content"
+  >
+    <div
+      class="w-16 h-16 mx-auto bg-brand-dark-wood rounded-full flex items-center justify-center mb-6 border-2 border-brand-gold"
+    >
+      <svg
+        class="w-8 h-8 text-brand-gold"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+      </svg>
+    </div>
+
+    <h3 class="text-2xl font-serif text-brand-dark mb-4">
+      Redirection en cours...
+    </h3>
+
+    <p class="text-brand-dark/80 font-light mb-8 font-sans">
+      Pour vous garantir le meilleur service, nos réservations s'effectuent via
+      la plateforme partenaire <strong class="text-brand-bordeaux"
+        >The Fork</strong
+      >.
+      <br /><br />
+      Vous allez y être redirigé dans un instant.
+    </p>
+
+    <div class="flex justify-center gap-4">
+      <button
+        id="close-modal-btn"
+        class="px-6 py-2 border border-brand-dark/20 text-brand-dark/60 hover:text-brand-dark hover:border-brand-dark transition-colors rounded-sm uppercase tracking-wider text-xs font-bold"
+      >
+        Annuler
+      </button>
+      <a
+        href="https://www.thefork.fr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-6 py-2 bg-brand-bordeaux text-brand-cream hover:bg-brand-bordeaux-light transition-colors rounded-sm uppercase tracking-wider text-xs font-bold"
+        id="continue-btn"
+      >
+        Continuer
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to handle the modal
+  const form = document.getElementById("reservation-form");
+  const modal = document.getElementById("thefork-modal");
+  const modalContent = document.getElementById("thefork-modal-content");
+  const closeBtn = document.getElementById("close-modal-btn");
+  const continueBtn = document.getElementById("continue-btn");
+
+  // Open modal on form submit instead of submitting
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (modal && modalContent) {
+      modal.classList.remove("opacity-0", "pointer-events-none");
+      modalContent.classList.remove("scale-95");
+      modalContent.classList.add("scale-100");
+    }
+  });
+
+  // Close modal functions
+  const closeModal = () => {
+    if (modal && modalContent) {
+      modal.classList.add("opacity-0", "pointer-events-none");
+      modalContent.classList.remove("scale-100");
+      modalContent.classList.add("scale-95");
+    }
+  };
+
+  closeBtn?.addEventListener("click", closeModal);
+  continueBtn?.addEventListener("click", closeModal); // closes our modal as it opens new tab
+
+  // Close when clicking outside
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+</script>
